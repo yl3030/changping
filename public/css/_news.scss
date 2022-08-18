@@ -1,0 +1,303 @@
+.news {
+    &-banner {
+        background-image: url(../img/news-banner.png);
+        h1, h2, h3 {
+            padding: 0 30px;
+        }
+        hr {
+            color: $main-pink;
+        }
+    }
+    &-card {
+        display: block;
+        &_pic {
+            width: 100%;
+            padding-bottom: 100%;
+            position: relative;
+            transition: $common-transition;
+            position: relative;
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                top: 0;
+                left: 0;
+            }
+        }
+        &_text {
+            background-color: #fff;
+            padding: 15px 25px;
+            transition: $common-transition;
+            position: relative;
+            h5 {
+                font-size: 16px;
+                font-weight: bold;
+                margin: 0 0 5px;
+            }
+        }
+        &_content {
+            font-size: 14px;
+            font-weight: bold;
+            margin: 0 0 40px;
+        }
+        &_dur {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            font-weight: bold;
+            font-size: 13px;
+            margin: 0;
+            &Line {
+                margin: 0 5px 0 10px;
+                width: 40px;
+                height: 1px;
+                background-color: #000;
+            }
+        }     
+    }
+    &-content {
+        padding: 100px 0;
+        background-image: url(../img/new-bg.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        .row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .news-card {
+            margin-bottom: 80px;
+            padding-left: 15px;
+            padding-right: 15px;
+            transition: $common-transition;
+            position: relative;
+            &::before {
+                position: absolute;
+                content: "";
+                width: calc(100% - 30px + 10px);
+                height: 5px;
+                background-color: $main-yellow;
+                transition: $common-transition;
+                top: -5px;
+                left: 10px;
+                opacity: 0;
+            }
+            &::after {
+                position: absolute;
+                content: "";
+                width: calc(100% - 30px + 10px);
+                height: 5px;
+                background-color: $main-yellow;
+                transition: $common-transition;
+                bottom: -5px;
+                left: 10px;
+                opacity: 0;
+            }
+            &_pic {
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 5px;
+                    height: 100%;
+                    background-color: $main-yellow;
+                    transition: $common-transition;
+                    top: 0;
+                    left: -5px;
+                    opacity: 0;
+                }
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 5px;
+                    height: 100%;
+                    background-color: $main-yellow;
+                    transition: $common-transition;
+                    top: 0;
+                    right: -5px;
+                    opacity: 0;
+                }
+            }
+            &_text {
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 5px;
+                    height: 100%;
+                    background-color: $main-yellow;
+                    transition: $common-transition;
+                    top: 0;
+                    left: -5px;
+                    opacity: 0;
+                }
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 5px;
+                    height: 100%;
+                    background-color: $main-yellow;
+                    transition: $common-transition;
+                    top: 0;
+                    right: -5px;
+                    opacity: 0;
+                }
+            }
+            &:hover {
+                &::before, &::after {
+                    opacity: 1;
+                }
+                .news-card {
+                    &_pic, &_text {
+                        &::before, &::after {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-inner {
+        padding: 100px 0;
+        background-image: url(../img/news-content-bg.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        &_pic {
+            width: 100%;
+        }
+        &_text {
+            padding-left: 40px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+            height: 100%;
+            >div {
+                width: 100%;
+            }
+        }
+        &_title {
+            font-size: 22px;
+            font-weight: 600;
+            color: $main-pink;
+            margin-bottom: 20px;
+            letter-spacing: 0.1em;
+        }
+        &_content {
+            letter-spacing: 0.14em;
+            line-height: 1.8;
+            font-weight: 500;
+        }
+        &_date {
+            margin-top: 40px;
+        }
+        .btn-more {
+            margin-left: auto;
+        }
+    }
+    &_title {
+        margin-bottom: 40px;
+        h2 {
+            font-size: 22px;
+            font-weight: 600;
+            margin: 0;
+            width: 210px;
+        }
+        &_line {
+            width: calc(100% - 210px);
+            margin-left: 10px;
+            height: 2px;
+            background-color: #000;
+            transform: translateY(-1px);
+        }
+    }
+}
+
+@media screen and (max-width:991px) {
+    .news {
+        &-inner {
+            &_text {
+                padding-left: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    .news {
+        &-card {
+            &_text {
+                padding: 10px 15px;
+            }
+            &_content {
+                margin-bottom: 25px;
+            }
+        }
+        &-content {
+            .news-card {
+                margin-bottom: 40px;
+            }
+        }
+        &-inner {
+            &_text {
+                padding-left: 0;
+                padding-top: 30px;
+            }
+            .btn-more {
+                margin-top: 40px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:575px) {
+    .news {
+        &-banner {
+            background-image: url(../img/news-banner-m.png);
+            h1, h2, h3 {
+                padding: 0 20px;
+            }
+            .banner-common_text {
+                width: 250px;
+            }
+        }
+        &-content {
+            .container {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            .news-card {
+                padding-left: 10px;
+                padding-right: 10px;
+                &::before {
+                    width: calc(100% - 20px + 10px);
+                    left: 5px;
+                }
+                &::after {
+                    width: calc(100% - 20px + 10px);
+                    left: 5px;
+                }
+            }
+        }
+        &_title {
+            margin-bottom: 30px;
+        }
+        &-inner {
+            padding: 50px 0;
+        }
+    }
+}
+
+@media screen and (max-width:370px) {
+    .news {
+        &-content {
+            .row {
+                >.news-card {
+                    width: 100% ;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}
