@@ -20,6 +20,7 @@ var swiper = new Swiper(".home-menu_slider", {
     centeredSlides: true,
     speed:800,
     loop: true,
+    simulateTouch:false,
     navigation: {
         nextEl: ".home-menu_slider_next",
         prevEl: ".home-menu_slider_prev",
@@ -29,4 +30,16 @@ var swiper = new Swiper(".home-menu_slider", {
             slidesPerView: 2.5,
         }
     }
+})
+
+// tab
+$(".banner-tab_link").click(function(){
+    let target = $(this).data("target");
+    let top;
+    if($(window).width() >= 767){
+        top = $(target).offset().top - 70;
+    }else {
+        top = $(target).offset().top - 60;
+    }
+    $("html, body").animate({scrollTop: top}, 300);
 })

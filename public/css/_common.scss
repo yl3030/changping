@@ -215,6 +215,9 @@ input, textarea, button {
             font-size: 20px;
             font-weight: 600;
             margin: 0;
+            a {
+                color: #fff;
+            }
         }
     }
     &_copyright {
@@ -244,35 +247,52 @@ main {
         font-weight: bold;
     }
     &-third {
-        font-size: 20px;
-        font-weight: 600;
-        letter-spacing: 0.05em;
-        color: $main-pink;
-        position: relative;
-        padding: 0 5px;
-        img {
-            height: 12px;
-            margin: 8px 0 0;
-            transform: translateX(-10px);
-        }
         span {
-            position: absolute;
-            width: 100%;
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%);
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            color: $main-pink;
+            text-align: left;
+            width: fit-content;
+            display: block;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-top: 5px;
+            padding: 0 25px 0 15px;
+            background-position: 0 70%;
+            transform: translateX(-15px);
         }
         &.join {
             span {
-                position: static;
-                width: fit-content;
                 margin: 0 auto;
-                display: block;
                 background-image: url(../img/textBg-join.svg);
-                background-position: 0 70%;
-                background-size: 100%;
-                background-repeat: no-repeat;
                 padding: 0 5px;
+                font-size: 32px;
+                transform: translateY(-15px);
+            }
+        }
+        &.tt-story {
+            span {
+                background-image: url(../img/yellow-line.png);
+            }
+        }
+        &.tt-news {
+            span {
+                background-image: url(../img/textBg-new.svg);
+            }
+        }
+        &.tt-menu {
+            span {
+                background-image: url(../img/textBg-new.svg);
+                font-size: 30px;
+                color: #fff;
+                margin: 0 auto;
+            }
+        }
+        &.tt-branch {
+            span {
+                background-image: url(../img/textBg-new.svg);
+                color: #fff;
             }
         }
     }
@@ -434,9 +454,6 @@ main {
         &-main {
             font-size: 90px;
         }
-        &-second {
-            // font-size: 30px;
-        }
     }
 }
 
@@ -564,6 +581,18 @@ main {
     .title {
         &-main {
             font-size: 60px;
+        }
+        &-third {
+            &.tt-menu {
+                span {
+                    font-size: 24px;
+                }
+            }
+            &.join {
+                span {
+                    font-size: 28px;
+                }
+            }
         }
     }
 

@@ -1,8 +1,6 @@
 .branch {
     &_map {
         width: 55%;
-        // height: 580px;
-        // width: 100%;
         padding-bottom: calc(55% * 0.76);
         position: relative;
         #branch_map {
@@ -36,10 +34,11 @@
                 color: #fff;
                 border: 2px solid;
                 border-width: 0 2px 0 0;
+                transition: $common-transition;
                 p {
                     margin: 0;
                 }
-                &.active {
+                &.active, &:hover {
                     background-color: $main-pink;
                     color: $main-yellow;
                 }
@@ -130,7 +129,7 @@
             width: 100%;
         }
         &_table {
-            height: auto;
+            max-height: none;
         }
     }
 }
@@ -149,6 +148,20 @@
             }
             &_crown {
                 width: 50px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    .branch {
+        &_list {
+            &_inner {
+                .nav-item {
+                    &:first-child, &:nth-child(2) {
+                        border-bottom: 2px solid #fff;
+                    }
+                }
             }
         }
     }

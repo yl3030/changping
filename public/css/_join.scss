@@ -32,6 +32,9 @@
             font-size: 20px;
             background-color: $main-pink;
             letter-spacing: 0.05em;
+            &:hover {
+                color: #fff;
+            }
         }
         .btn-more {
             margin-bottom: 10px;
@@ -59,9 +62,11 @@
                 }
             }
             .title-third {
-                color: #fff;
                 span {
                     position: static;
+                    color: #fff;
+                    margin: 0 auto;
+                    font-size: 28px;
                 }
             }
             &_icon {
