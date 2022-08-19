@@ -1,0 +1,155 @@
+.branch {
+    &_map {
+        width: 55%;
+        // height: 580px;
+        // width: 100%;
+        padding-bottom: calc(55% * 0.76);
+        position: relative;
+        #branch_map {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    &_list {
+        width: 45%;
+        background-image: url(../img/branch-bg.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 60px 40px 30px;
+        &_inner {
+            color: #fff;
+            .row {
+                margin: 0;
+                >li {
+                    padding: 0;
+                }
+            }
+            .nav-link {
+                border-radius: 0;
+                padding: 20px 15px;
+                width: 100%;
+                text-align: left;
+                color: #fff;
+                border: 2px solid;
+                border-width: 0 2px 0 0;
+                p {
+                    margin: 0;
+                }
+                &.active {
+                    background-color: $main-pink;
+                    color: $main-yellow;
+                }
+            }
+            .nav-item {
+                &:last-child {
+                    .nav-link {
+                        border-right: 0;
+                    }
+                }
+            }
+            .nav-tabs {
+                border: 2px solid #fff;
+                border-bottom: 0;
+                background-color: #000;
+            }
+        }
+    }
+    &_tab {
+        &_en {
+            font-weight: 900;
+        }
+        &_ch {
+            font-size: 14px;
+            font-weight: 700;
+        }
+    }
+    &_table {
+        overflow-y: auto;
+        // height: 100%;
+        max-height: 620px;
+        border: 2px solid #fff;
+        background-color: #000;
+        &::-webkit-scrollbar {
+            background-color: #000;
+            border-left: 1px solid #fff;
+            width: 10px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #fff;
+            border-radius: 100px;
+            width: 8px;
+        }
+        table {
+            width: 100%;
+            td {
+                text-align: center;
+                padding: 15px 10px;
+                border-bottom: 2px solid #fff;
+                font-weight: 600;
+                svg {
+                    width: 30px;
+                    transform: translateY(-3px);
+                    .cls-1 {
+                        transition: $common-transition;
+                    }
+                }
+            }
+            tr {
+                cursor: pointer;
+                transition: $common-transition;
+                &:last-child {
+                    td {
+                        border: 0;
+                    }
+                }
+                &:hover {
+                    background-color: $main-pink;
+                    svg {
+                        .cls-1 {
+                            fill: $main-yellow;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1400px) {
+    .branch {
+        &_map {
+            width: 100%;
+            padding-bottom: 0;
+            height: 500px;
+        }
+        &_list {
+            width: 100%;
+        }
+        &_table {
+            height: auto;
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    .branch {
+        &_list {
+            padding: 40px 20px;
+        }
+        &_table {
+            table {
+                td {
+                    text-align: left;
+                    vertical-align: top;
+                }
+            }
+            &_crown {
+                width: 50px;
+            }
+        }
+    }
+}

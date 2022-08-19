@@ -55,49 +55,49 @@
                                 <span>昌平大小事</span>
                             </h4>
                         </div>
-                        <div class="d-flex justify-content-center home-story_item">
-                            <a href="" class="home-story_link">
-                                <div class="home-story_icon">
+                        <div class="d-flex justify-content-center banner-tab_item">
+                            <a href="" class="home-story_link banner-tab_link story-banner_link">
+                                <div class="banner-tab_icon story-banner_icon">
                                     <img class="normal" src="./public/img/icon-crown.svg" alt="">
                                     <img class="hover" src="./public/img/icon-crown-white.svg" alt="">
                                 </div>
-                                <div class="home-story_text">
+                                <div class="banner-tab_text">
                                     <h5>
                                         BRAND<br>STORY
                                     </h5>
                                     <h6>品牌故事</h6>
                                 </div>
                             </a>
-                            <a href="" class="home-story_link">
-                                <div class="home-story_icon">
+                            <a href="" class="home-story_link banner-tab_link story-banner_link">
+                                <div class="banner-tab_icon story-banner_icon">
                                    <img class="normal" src="./public/img/icon-star.svg" alt="">
                                    <img class="hover" src="./public/img/icon-star-white.svg" alt="">
                                 </div>
-                                <div class="home-story_text">
+                                <div class="banner-tab_text">
                                     <h5>
                                         TALENT<br>EDUCATION
                                     </h5>
                                     <h6>人才培育</h6>
                                 </div>
                             </a>
-                            <a href="" class="home-story_link">
-                                <div class="home-story_icon">
+                            <a href="" class="home-story_link banner-tab_link story-banner_link">
+                                <div class="banner-tab_icon story-banner_icon">
                                     <img class="normal" src="./public/img/icon-cerify.svg" alt="">
                                     <img class="hover" src="./public/img/icon-certify-white.svg" alt="">
                                 </div>
-                                <div class="home-story_text">
+                                <div class="banner-tab_text">
                                     <h5>
                                         QUALIFY<br>INSIST
                                     </h5>
                                     <h6>品質堅持</h6>
                                 </div>
                             </a>
-                            <a href="" class="home-story_link">
-                                <div class="home-story_icon">
+                            <a href="" class="home-story_link banner-tab_link story-banner_link">
+                                <div class="banner-tab_icon story-banner_icon">
                                     <img class="normal" class="normal" src="./public/img/icon-future.svg" alt="">
                                     <img class="hover" src="./public/img/icon-future-white.svg" alt="">
                                 </div>
-                                <div class="home-story_text">
+                                <div class="banner-tab_text">
                                     <h5>
                                         FUTURE<br>OUTLOOK
                                     </h5>
@@ -179,23 +179,22 @@
             <div class="home-menu_sliderBox">
                 <div class="swiper-container home-menu_slider">
                     <div class="swiper-wrapper align-items-center">
-                      <div class="swiper-slide">
+                      <a href="" class="swiper-slide">
                           <div class="home-menu_product">
-                            <img src="./public/img/product-1.png" alt="">
+                            <img class="prodictPic" src="./public/img/product-1.png" alt="">
                           </div>
-                      </div>
-                      <div class="swiper-slide">
+                      </a>
+                      <a href="" class="swiper-slide">
                         <div class="home-menu_product">
-                            <img src="./public/img/product-2.png" alt="">
+                            <img class="prodictPic" src="./public/img/product-2.png" alt="">
                           </div>
-                      </div>
-                      <div class="swiper-slide">
+                      </a>
+                      <a href="" class="swiper-slide">
                         <div class="home-menu_product">
-                            <img src="./public/img/product-3.png" alt="">
+                            <img class="prodictPic" src="./public/img/product-3.png" alt="">
                           </div>
-                      </div>
+                      </a>
                     </div>     
-                   
                 </div>
                 <div class="swiper-button-next home-menu_slider_next"></div>
                 <div class="swiper-button-prev home-menu_slider_prev"></div>
@@ -227,8 +226,7 @@
                 </div>
                 <div class="home-title">
                     <h2 class="title-main">JOIN.</h2>
-                    <h4 class="title-third">
-                        <img src="./public/img/yellow-line.png" alt="">
+                    <h4 class="title-third join">
                         <span>加盟創業</span>
                     </h4>
                 </div>
@@ -313,6 +311,7 @@
             slidesPerView: 1,
             spaceBetween: 20,
             slidesPerGroup: 1,
+            speed:800,
             loop: true,
             navigation: {
                 nextEl: ".home-news_slider_next",
@@ -331,21 +330,7 @@
                 },
             },
         })
-        var swiper = new Swiper(".home-menu_slider", {
-            slidesPerView: 1,
-            slidesPerGroup: 1,
-            centeredSlides: true,
-            loop: true,
-            navigation: {
-                nextEl: ".home-menu_slider_next",
-                prevEl: ".home-menu_slider_prev",
-            },
-            breakpoints: {
-                576: {
-                    slidesPerView: 2.5,
-                }
-            }
-        })
+        
         // 地圖
 
         var map;

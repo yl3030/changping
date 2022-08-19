@@ -1,21 +1,23 @@
 .story {
     &-banner {
-        padding: 100px 0;
         background-image: url(../img/bg-wood.png);
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-        text-align: center;
-        &_item {
-            margin-top: 40px;
+        &_link {
+            &:hover {
+                .banner-tab_icon {
+                    background-color: $main-pink;
+                    img {
+                        &.normal {
+                            opacity: 0;
+                        }
+                        &.hover {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
         }
         &_icon {
-            width: 90px;
-            height: 90px;
-        }
-        &_link {
-            margin: 0 30px;
-            cursor: pointer;
+            background-color: $main-yellow;
         }
     }
     &-content {
@@ -149,11 +151,11 @@
 
 @media screen and (max-width:767px) {
     .story {
-        &-banner {
-            &_link {
-                margin: 0 15px;
-            }
-        }
+        // &-banner {
+        //     &_link {
+        //         margin: 0 15px;
+        //     }
+        // }
         &-content {
             &_item {
                 padding-left: 20px !important;
@@ -215,16 +217,15 @@
 }
 
 @media screen and (max-width:575px) {
-    .story {
-        &-banner {
-            padding: 80px 0;
-            &_link {
-                margin: 0 0 30px;
-                width: 35%;
-            }
-        }
-        
-    }
+    // .story {
+    //     &-banner {
+    //         padding: 80px 0;
+    //         &_link {
+    //             margin: 0 0 30px;
+    //             width: 35%;
+    //         }
+    //     }
+    // }
 }
 
 @media screen and (max-width:530px) {
@@ -259,13 +260,13 @@
 @media screen and (max-width:400px) {
     .story {
         &-banner {
-            &_icon {
-                width: 80px;
-                height: 80px;
-            }
-            &_link {
-                width: 40%;
-            }
+            // &_icon {
+            //     width: 80px;
+            //     height: 80px;
+            // }
+            // &_link {
+            //     width: 40%;
+            // }
         }
     }
 }

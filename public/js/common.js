@@ -12,3 +12,21 @@ $(window).on("resize scroll", function(){
         $(".header").removeClass("active");
     }
 })
+
+// menu
+var swiper = new Swiper(".home-menu_slider", {
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    centeredSlides: true,
+    speed:800,
+    loop: true,
+    navigation: {
+        nextEl: ".home-menu_slider_next",
+        prevEl: ".home-menu_slider_prev",
+    },
+    breakpoints: {
+        576: {
+            slidesPerView: 2.5,
+        }
+    }
+})
