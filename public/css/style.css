@@ -90,7 +90,17 @@ input, textarea, button {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 435px;
+  white-space: nowrap;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .header_nav a {
@@ -100,10 +110,24 @@ input, textarea, button {
   font-size: 14px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  position: relative;
 }
 
-.header_nav a:hover {
+.header_nav a span {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.header_nav a:hover span {
   color: #F7CD4B;
+}
+
+.header_nav a:hover span.header_nav_en {
+  opacity: 0;
+}
+
+.header_nav a:hover span.header_nav_ch {
+  opacity: 1;
 }
 
 .header_nav li {
@@ -112,6 +136,18 @@ input, textarea, button {
 
 .header_nav li.active a {
   color: #F7CD4B;
+}
+
+.header_nav_ch {
+  position: absolute;
+  white-space: nowrap;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0;
 }
 
 .header_menu {
@@ -683,6 +719,14 @@ main {
   }
 }
 
+.home-banner {
+  position: relative;
+}
+
+.home-banner img {
+  width: 100%;
+}
+
 .home-title {
   margin-bottom: 100px;
   width: -webkit-fit-content;
@@ -1198,6 +1242,19 @@ main {
 @media screen and (max-width: 767px) {
   .home-join_mask {
     background-color: rgba(0, 0, 0, 0.4);
+  }
+  .home-banner {
+    width: 100%;
+    height: calc(100vh - 60px);
+    position: relative;
+  }
+  .home-banner img {
+    position: absolute;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    top: 0;
+    left: 0;
   }
 }
 

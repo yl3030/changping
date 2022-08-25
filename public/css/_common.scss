@@ -88,15 +88,33 @@ input, textarea, button {
         top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
-        width: 435px;
+        white-space: nowrap;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         a {
             color: #fff;
             font-family: 'Arial Bold';
             font-weight: bold;
             font-size: 14px;
             transition: $common-transition;
+            position: relative;
+            span {
+                transition: $common-transition;
+            }
             &:hover {
-                color: $main-yellow;
+                span {
+                    color: $main-yellow;
+                    &.header_nav {
+                        &_en {
+                            opacity: 0;
+                        }
+                        &_ch {
+                            opacity: 1;
+                        }
+                    }
+                }
             }
         }
         li {
@@ -106,6 +124,15 @@ input, textarea, button {
                     color: $main-yellow;
                 }
             }
+        }
+        &_ch {
+            position: absolute;
+            white-space: nowrap;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            transition: $common-transition;
+            opacity: 0;
         }
     }
     &_menu {

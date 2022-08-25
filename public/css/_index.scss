@@ -1,4 +1,10 @@
 .home {
+    &-banner {
+        position: relative;
+        img {
+            width: 100%;
+        }
+    }
     &-title {
         margin-bottom: 100px;
         width: fit-content;
@@ -454,6 +460,18 @@
         &-join {
             &_mask {
                 background-color: rgba(0,0,0,0.4);
+            }
+        }
+        &-banner {
+            width: 100%;
+            height: calc(100vh - 60px);
+            position: relative;
+            img {
+                position: absolute;
+                height: 100%;
+                object-fit: cover;
+                top: 0;
+                left: 0;
             }
         }
     }
