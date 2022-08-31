@@ -63,7 +63,6 @@ input, textarea, button {
 .header {
     transition: $common-transition;
     background-color: $main-pink;
-    position: relative;
     color: #fff;
     height: 70px;
     position: fixed;
@@ -73,6 +72,13 @@ input, textarea, button {
     z-index: 200;
     >.container {
         height: 100%;
+        position: relative;
+        >a {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+        }
     }
     &_logo {
         width: 100px;
